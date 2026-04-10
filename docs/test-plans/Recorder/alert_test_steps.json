@@ -1,0 +1,1263 @@
+{
+    "title": "Recording 4/8/2026 at 12:02:23 PM",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 923,
+            "height": 665,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://cert-comply.content.aws.lexis.com/sso",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://cert-comply.content.aws.lexis.com/sso",
+                    "title": "Single Sign On - Regulatory Compliance"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-Alerts\"]"
+                ],
+                [
+                    "pierce/#tab-Alerts"
+                ]
+            ],
+            "offsetY": 17,
+            "offsetX": 25.75
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-56\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-56"
+                ]
+            ],
+            "offsetY": 16,
+            "offsetX": 238.3333282470703
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-6\"]/div/div/div[1]/ul/li[5]"
+                ],
+                [
+                    "pierce/li.hover"
+                ]
+            ],
+            "offsetY": 5,
+            "offsetX": 78.66665649414062
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-57\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-57"
+                ]
+            ],
+            "offsetY": 21,
+            "offsetX": 107.33331298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-7\"]/div/div/div[1]/ul/li[3]/span"
+                ],
+                [
+                    "pierce/#el-id-5420-7 li.hover > span"
+                ],
+                [
+                    "text/Home Care"
+                ]
+            ],
+            "offsetY": 12.666656494140625,
+            "offsetX": 56.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-58\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-58"
+                ]
+            ],
+            "offsetY": 9,
+            "offsetX": 70.33331298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-8\"]/div/div/div[1]/ul/li[1]"
+                ],
+                [
+                    "pierce/#el-id-5420-8 li.hover"
+                ]
+            ],
+            "offsetY": 11,
+            "offsetX": 57.6666259765625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[2]/div[5]/button/span"
+                ],
+                [
+                    "pierce/div.selector-action-button span"
+                ]
+            ],
+            "offsetY": 4,
+            "offsetX": 14.05206298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-60\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-60"
+                ]
+            ],
+            "offsetY": 18,
+            "offsetX": 56.73957824707031
+        },
+        {
+            "type": "change",
+            "value": "testing ",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-60\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-60"
+                ]
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-61\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-61"
+                ]
+            ],
+            "offsetY": 9,
+            "offsetX": 24.52081298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-14\"]/div/div/div[1]/ul/li[2]/span"
+                ],
+                [
+                    "pierce/#el-id-5420-14 li.hover > span"
+                ],
+                [
+                    "text/News"
+                ]
+            ],
+            "offsetY": 5.666656494140625,
+            "offsetX": 16
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-62\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-62"
+                ]
+            ],
+            "offsetY": 5,
+            "offsetX": 39.02081298828125
+        },
+        {
+            "type": "change",
+            "value": "anshul",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-62\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-62"
+                ]
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-63\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-63"
+                ]
+            ],
+            "offsetY": 12,
+            "offsetX": 37.8228759765625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-17\"]/div/div[1]/div/div[2]/table/tbody/tr[3]/td[5]/div/span"
+                ],
+                [
+                    "pierce/tr:nth-of-type(3) > td:nth-of-type(5) span"
+                ]
+            ],
+            "offsetY": 13.33331298828125,
+            "offsetX": 12.3125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-64\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-64"
+                ]
+            ],
+            "offsetY": 11,
+            "offsetX": 135.7083282470703
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-64\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-64"
+                ]
+            ],
+            "offsetY": 8,
+            "offsetX": 79.70832824707031
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[4]/div[1]/form/div/div[6]/div/div/div/div/div[1]/input"
+                ],
+                [
+                    "pierce/div.el-select__tags > input"
+                ]
+            ],
+            "offsetY": 2,
+            "offsetX": 12.67706298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-21\"]/div/div/div[1]/ul/div/div[4]/div[1]/label/span/span"
+                ],
+                [
+                    "pierce/ul > div > div:nth-of-type(4) span > span"
+                ]
+            ],
+            "offsetY": 4.33331298828125,
+            "offsetX": 10.33331298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-21\"]/div/div/div[1]/ul/div/div[9]/div[1]/label/span/span"
+                ],
+                [
+                    "pierce/ul > div > div:nth-of-type(9) span > span"
+                ]
+            ],
+            "offsetY": 7.33331298828125,
+            "offsetX": 9.33331298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[4]/div[1]/div"
+                ],
+                [
+                    "pierce/div.editor-container > div.form-section > div"
+                ],
+                [
+                    "text/Create Previous"
+                ]
+            ],
+            "offsetY": 15,
+            "offsetX": 375
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[4]/div[1]/div/button[1]/span"
+                ],
+                [
+                    "pierce/div.editor-container > div.form-section button.el-button--primary > span"
+                ],
+                [
+                    "text/Create"
+                ]
+            ],
+            "offsetY": 10,
+            "offsetX": 12.9375
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-description\"]"
+                ],
+                [
+                    "pierce/#tab-description"
+                ],
+                [
+                    "text/Description"
+                ]
+            ],
+            "offsetY": 31.33331298828125,
+            "offsetX": 26.02081298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 83,
+            "offsetX": 318,
+            "frame": [
+                1
+            ]
+        },
+        {
+            "type": "change",
+            "value": "this is description for testing",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]"
+                ],
+                [
+                    "pierce/#tinymce"
+                ]
+            ],
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "c"
+        },
+        {
+            "type": "keyUp",
+            "key": "c",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-complianceSource\"]"
+                ],
+                [
+                    "pierce/#tab-complianceSource"
+                ],
+                [
+                    "text/Compliance Source"
+                ]
+            ],
+            "offsetY": 17.333328247070312,
+            "offsetX": 63.73956298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 76,
+            "offsetX": 249,
+            "frame": [
+                2
+            ]
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                2
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                2
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "v"
+        },
+        {
+            "type": "keyUp",
+            "key": "v",
+            "frame": [
+                2
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                2
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "doubleClick",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]/p"
+                ],
+                [
+                    "pierce/p"
+                ],
+                [
+                    "text/this is description"
+                ]
+            ],
+            "offsetY": 19,
+            "offsetX": 83,
+            "frame": [
+                2
+            ]
+        },
+        {
+            "type": "change",
+            "value": "this is compliance for testing",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]"
+                ],
+                [
+                    "pierce/#tinymce"
+                ]
+            ],
+            "frame": [
+                2
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-impactOnObligation\"]"
+                ],
+                [
+                    "pierce/#tab-impactOnObligation"
+                ],
+                [
+                    "text/Impact On Obligation"
+                ]
+            ],
+            "offsetY": 28.333328247070312,
+            "offsetX": 62.1978759765625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 91,
+            "offsetX": 229,
+            "frame": [
+                3
+            ]
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                3
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                3
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "v"
+        },
+        {
+            "type": "keyUp",
+            "key": "v",
+            "frame": [
+                3
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                3
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "doubleClick",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]/p"
+                ],
+                [
+                    "pierce/p"
+                ],
+                [
+                    "text/this is description"
+                ]
+            ],
+            "offsetY": 9,
+            "offsetX": 98,
+            "frame": [
+                3
+            ]
+        },
+        {
+            "type": "change",
+            "value": "this is impact for testing",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]"
+                ],
+                [
+                    "pierce/#tinymce"
+                ]
+            ],
+            "frame": [
+                3
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-metaAI\"]"
+                ],
+                [
+                    "pierce/#tab-metaAI"
+                ],
+                [
+                    "text/Meta Tags"
+                ]
+            ],
+            "offsetY": 16.333328247070312,
+            "offsetX": 26.20831298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-72\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-72"
+                ]
+            ],
+            "offsetY": 27.33331298828125,
+            "offsetX": 53.666656494140625
+        },
+        {
+            "type": "change",
+            "value": "this is rating testig feature",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-72\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-72"
+                ]
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-72\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-72"
+                ]
+            ],
+            "offsetY": 15.33331298828125,
+            "offsetX": 116.66665649414062
+        },
+        {
+            "type": "change",
+            "value": "this is rating testing feature",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-72\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-72"
+                ]
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-71\"]/span[3]/i/svg[1]"
+                ],
+                [
+                    "pierce/span:nth-of-type(3) svg:nth-of-type(1)"
+                ]
+            ],
+            "offsetY": 3.88018798828125,
+            "offsetX": 3.01666259765625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-72\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-72"
+                ],
+                [
+                    "text/this is rating"
+                ]
+            ],
+            "offsetY": 46.33332824707031,
+            "offsetX": 252.66665649414062
+        },
+        {
+            "type": "keyDown",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "keyDown",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "key": "c"
+        },
+        {
+            "type": "keyUp",
+            "key": "c",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-73\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-73"
+                ]
+            ],
+            "offsetY": 67.33331298828125,
+            "offsetX": 90.66665649414062
+        },
+        {
+            "type": "change",
+            "value": "this is rating testing feature",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-73\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-73"
+                ]
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-74\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-74"
+                ]
+            ],
+            "offsetY": 47.33331298828125,
+            "offsetX": 93.66665649414062
+        },
+        {
+            "type": "change",
+            "value": "this is rating testing feature",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-74\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-74"
+                ]
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "doubleClick",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-74\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-74"
+                ]
+            ],
+            "offsetY": 13.33331298828125,
+            "offsetX": 74.66665649414062
+        },
+        {
+            "type": "change",
+            "value": "this is ai testing feature",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-74\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-74"
+                ]
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-75\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-75"
+                ]
+            ],
+            "offsetY": 12.33331298828125,
+            "offsetX": 122.66665649414062
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-49\"]/div/div/div[1]/ul/div/div[1]/div[1]/i"
+                ],
+                [
+                    "pierce/#el-id-5420-49 ul > div > div:nth-of-type(1) > div.el-tree-node__content > i"
+                ]
+            ],
+            "offsetY": 14.666656494140625,
+            "offsetX": 20.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-49\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[1]/div[1]/li/span"
+                ],
+                [
+                    "pierce/#el-id-5420-49 div.is-expanded > div.el-tree-node__children > div:nth-of-type(1) span"
+                ],
+                [
+                    "text/Agriculture and"
+                ]
+            ],
+            "offsetY": 13.333328247070312,
+            "offsetX": 31.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-49\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[2]/div[1]/li/span"
+                ],
+                [
+                    "pierce/#el-id-5420-49 div.is-expanded > div.el-tree-node__children > div:nth-of-type(2) span"
+                ],
+                [
+                    "text/Fishing and Wildlife"
+                ]
+            ],
+            "offsetY": 3.33331298828125,
+            "offsetX": 34.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"pane-metaAI\"]"
+                ],
+                [
+                    "pierce/#pane-metaAI"
+                ]
+            ],
+            "offsetY": 432.33333587646484,
+            "offsetX": 253
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"pane-metaAI\"]/div/div[3]/p/button/i/svg"
+                ],
+                [
+                    "pierce/#pane-metaAI div:nth-of-type(3) svg"
+                ]
+            ],
+            "offsetY": 2,
+            "offsetX": 1.947906494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-147\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-147"
+                ]
+            ],
+            "offsetY": 11,
+            "offsetX": 42.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-146\"]/div/div[1]/div/div[2]/table/tbody/tr[4]/td[4]/div/span"
+                ],
+                [
+                    "pierce/#el-id-5420-146 tr:nth-of-type(4) > td:nth-of-type(4) span"
+                ]
+            ],
+            "offsetY": 11.666656494140625,
+            "offsetX": 16.6875
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-148\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-148"
+                ]
+            ],
+            "offsetY": 16,
+            "offsetX": 66.6666259765625
+        },
+        {
+            "type": "change",
+            "value": "this is testing",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-148\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-148"
+                ]
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-76\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-76"
+                ]
+            ],
+            "offsetY": 5,
+            "offsetX": 183.66665649414062
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-50\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[1]/div[1]/li/span"
+                ],
+                [
+                    "pierce/#el-id-5420-50 div.el-tree-node__children > div:nth-of-type(1) span"
+                ]
+            ],
+            "offsetY": 6.666656494140625,
+            "offsetX": 26.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-50\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[2]/div[1]/li/span"
+                ],
+                [
+                    "pierce/#el-id-5420-50 div.el-tree-node__children > div:nth-of-type(2) span"
+                ]
+            ],
+            "offsetY": 11.666656494140625,
+            "offsetX": 21.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"pane-metaAI\"]"
+                ],
+                [
+                    "pierce/#pane-metaAI"
+                ]
+            ],
+            "offsetY": 950,
+            "offsetX": 228
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-77\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-77"
+                ]
+            ],
+            "offsetY": 6,
+            "offsetX": 66.66665649414062
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-51\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[6]/div[1]/li"
+                ],
+                [
+                    "pierce/#el-id-5420-51 div:nth-of-type(6) li"
+                ]
+            ],
+            "offsetY": 0.33331298828125,
+            "offsetX": 48.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-78\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-78"
+                ]
+            ],
+            "offsetY": 11,
+            "offsetX": 36.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-52\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[6]/div[1]/li/span"
+                ],
+                [
+                    "pierce/#el-id-5420-52 div:nth-of-type(6) span"
+                ],
+                [
+                    "text/Financial Reporting"
+                ]
+            ],
+            "offsetY": 6,
+            "offsetX": 54.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"pane-metaAI\"]"
+                ],
+                [
+                    "pierce/#pane-metaAI"
+                ]
+            ],
+            "offsetY": 951,
+            "offsetX": 256
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-79\"]"
+                ],
+                [
+                    "pierce/#el-id-5420-79"
+                ]
+            ],
+            "offsetY": 9,
+            "offsetX": 24.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-5420-53\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[5]/div[1]"
+                ],
+                [
+                    "pierce/#el-id-5420-53 div:nth-of-type(5) > div.el-tree-node__content"
+                ]
+            ],
+            "offsetY": 24.33331298828125,
+            "offsetX": 83.66665649414062
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"pane-metaAI\"]"
+                ],
+                [
+                    "pierce/#pane-metaAI"
+                ]
+            ],
+            "offsetY": 1041,
+            "offsetX": 217
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[4]/div[1]/div/button[1]/span"
+                ],
+                [
+                    "pierce/div.editor-container > div.form-section button.el-button--primary > span"
+                ],
+                [
+                    "text/Save as Draft"
+                ]
+            ],
+            "offsetY": 5,
+            "offsetX": 38.11456298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[4]/div[1]/div/button[4]/span"
+                ],
+                [
+                    "pierce/div.form-section button:nth-of-type(4) > span"
+                ]
+            ],
+            "offsetY": 2,
+            "offsetX": 21.3853759765625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/alertCreation",
+            "selectors": [
+                [
+                    "xpath//html/body/div[8]/div/div/div[3]/button[2]/span"
+                ],
+                [
+                    "pierce/div.el-overlay button.el-button--primary > span"
+                ],
+                [
+                    "text/Yes, Publish"
+                ]
+            ],
+            "offsetY": 4.33331298828125,
+            "offsetX": 30.34375
+        }
+    ]
+}
+

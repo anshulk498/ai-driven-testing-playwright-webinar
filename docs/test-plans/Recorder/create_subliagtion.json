@@ -1,0 +1,1286 @@
+{
+    "title": "create subobliagtion",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 744,
+            "height": 665,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://cert-comply.content.aws.lexis.com/sso",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://cert-comply.content.aws.lexis.com/sso",
+                    "title": "Single Sign On - Regulatory Compliance"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-7356-12\"]/li[2]"
+                ],
+                [
+                    "pierce/div:nth-of-type(4) li:nth-of-type(2)"
+                ],
+                [
+                    "text/Subobligation"
+                ]
+            ],
+            "offsetY": 22,
+            "offsetX": 67.33331298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-47\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-47"
+                ]
+            ],
+            "offsetY": 17.052078247070312,
+            "offsetX": 293.3333282470703
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-6\"]/div/div/div[1]/ul/li[5]"
+                ],
+                [
+                    "pierce/li.hover"
+                ]
+            ],
+            "offsetY": 6.666656494140625,
+            "offsetX": 99.33332824707031
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-48\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-48"
+                ]
+            ],
+            "offsetY": 8.052078247070312,
+            "offsetX": 84.33331298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-7\"]/div/div/div[1]/ul/li[3]/span"
+                ],
+                [
+                    "pierce/#el-id-1383-7 li.hover > span"
+                ],
+                [
+                    "text/Home Care"
+                ]
+            ],
+            "offsetY": 4,
+            "offsetX": 53.33331298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-49\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-49"
+                ]
+            ],
+            "offsetY": 16.052078247070312,
+            "offsetX": 57.33331298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-8\"]/div/div/div[1]/ul/li[1]"
+                ],
+                [
+                    "pierce/#el-id-1383-8 li.hover"
+                ]
+            ],
+            "offsetY": 9.666656494140625,
+            "offsetX": 54.33331298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-50\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-50"
+                ]
+            ],
+            "offsetY": 7.0520782470703125,
+            "offsetX": 214.7395782470703
+        },
+        {
+            "type": "change",
+            "value": "testing sub",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-50\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-50"
+                ]
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-51\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-51"
+                ]
+            ],
+            "offsetY": 11.052078247070312,
+            "offsetX": 27.61456298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-12\"]/div/div/div[1]/ul/li[1]/span"
+                ],
+                [
+                    "pierce/#el-id-1383-12 li.hover > span"
+                ]
+            ],
+            "offsetY": 4.3333282470703125,
+            "offsetX": 10
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-52\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-52"
+                ]
+            ],
+            "offsetY": 13.052078247070312,
+            "offsetX": 16.7291259765625
+        },
+        {
+            "type": "change",
+            "value": "1",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-52\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-52"
+                ]
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-53\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-53"
+                ]
+            ],
+            "offsetY": 13.052078247070312,
+            "offsetX": 108.02082824707031
+        },
+        {
+            "type": "change",
+            "value": "anshul",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-53\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-53"
+                ]
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[3]/div[1]/form/div/div[5]/div/div/div/div/span[1]/span"
+                ],
+                [
+                    "pierce/div:nth-of-type(5) span.el-input__prefix > span"
+                ]
+            ],
+            "offsetY": 11.052078247070312,
+            "offsetX": 15.65625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-16\"]/div/div[1]/div/div[2]/table/tbody/tr[4]/td[5]/div/span"
+                ],
+                [
+                    "pierce/#el-id-1383-16 tr:nth-of-type(4) > td:nth-of-type(5) span"
+                ]
+            ],
+            "offsetY": 5.666656494140625,
+            "offsetX": 16.9791259765625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-55\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-55"
+                ]
+            ],
+            "offsetY": 10.052078247070312,
+            "offsetX": 87.30206298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-18\"]/div/div[1]/div/div[2]/table/tbody/tr[4]/td[5]/div"
+                ],
+                [
+                    "pierce/#el-id-1383-18 tr:nth-of-type(4) > td:nth-of-type(5) > div"
+                ]
+            ],
+            "offsetY": 9.666656494140625,
+            "offsetX": 39.5
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[3]/div[1]/form/div/div[7]/div/div"
+                ],
+                [
+                    "pierce/div.jurisdiction-item > div > div"
+                ]
+            ],
+            "offsetY": 2.0520782470703125,
+            "offsetX": 69.177001953125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[3]/div[1]/form/div/div[7]/div/div/div/div/div[1]/input"
+                ],
+                [
+                    "pierce/div.el-select__tags > input"
+                ]
+            ],
+            "offsetY": 7.0520782470703125,
+            "offsetX": 53.177001953125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-20\"]/div/div/div[1]/ul/div/div[9]/div[1]/label/span/span"
+                ],
+                [
+                    "pierce/ul > div > div:nth-of-type(9) span > span"
+                ]
+            ],
+            "offsetY": 2.666656494140625,
+            "offsetX": 10.6666259765625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-20\"]/div/div/div[1]/ul/div/div[4]/div[1]/label/span/span"
+                ],
+                [
+                    "pierce/ul > div > div:nth-of-type(4) span > span"
+                ]
+            ],
+            "offsetY": 5.666656494140625,
+            "offsetX": 8.6666259765625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[3]/div[1]/div/button[1]/span"
+                ],
+                [
+                    "pierce/div.editor-container > div.form-section button.el-button--primary > span"
+                ],
+                [
+                    "text/Create"
+                ]
+            ],
+            "offsetY": 9.05206298828125,
+            "offsetX": 13.9375
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-descriptionDirectional\"]"
+                ],
+                [
+                    "pierce/#tab-descriptionDirectional"
+                ],
+                [
+                    "text/Description"
+                ]
+            ],
+            "offsetY": 17.05206298828125,
+            "offsetX": 48.322906494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]/p"
+                ],
+                [
+                    "pierce/p"
+                ]
+            ],
+            "offsetY": 19,
+            "offsetX": 181,
+            "frame": [
+                1
+            ]
+        },
+        {
+            "type": "change",
+            "value": "this is description ",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]"
+                ],
+                [
+                    "pierce/#tinymce"
+                ]
+            ],
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "c"
+        },
+        {
+            "type": "keyUp",
+            "key": "c",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                1
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-descriptionQuestional\"]"
+                ],
+                [
+                    "pierce/#tab-descriptionQuestional"
+                ],
+                [
+                    "text/Compliance Question"
+                ]
+            ],
+            "offsetY": 19.052078247070312,
+            "offsetX": 62.041656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 54,
+            "offsetX": 112,
+            "frame": [
+                2
+            ]
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                2
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                2
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "v"
+        },
+        {
+            "type": "keyUp",
+            "key": "v",
+            "frame": [
+                2
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                2
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-practicalGuidance\"]"
+                ],
+                [
+                    "pierce/#tab-practicalGuidance"
+                ]
+            ],
+            "offsetY": 18.052078247070312,
+            "offsetX": 38.822906494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 45,
+            "offsetX": 224,
+            "frame": [
+                3
+            ]
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                3
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                3
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "v"
+        },
+        {
+            "type": "keyUp",
+            "key": "v",
+            "frame": [
+                3
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                3
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-remedialAction\"]"
+                ],
+                [
+                    "pierce/#tab-remedialAction"
+                ],
+                [
+                    "text/Remedial Action"
+                ]
+            ],
+            "offsetY": 30.052078247070312,
+            "offsetX": 70.9791259765625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 116,
+            "offsetX": 378,
+            "frame": [
+                4
+            ]
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                4
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                4
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "v"
+        },
+        {
+            "type": "keyUp",
+            "key": "v",
+            "frame": [
+                4
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                4
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-consequence\"]"
+                ],
+                [
+                    "pierce/#tab-consequence"
+                ],
+                [
+                    "text/Consequence"
+                ]
+            ],
+            "offsetY": 25.052078247070312,
+            "offsetX": 57.4375
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 129,
+            "offsetX": 348,
+            "frame": [
+                5
+            ]
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                5
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                5
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "v"
+        },
+        {
+            "type": "keyUp",
+            "key": "v",
+            "frame": [
+                5
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                5
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-complianceSource\"]"
+                ],
+                [
+                    "pierce/#tab-complianceSource"
+                ]
+            ],
+            "offsetY": 2.0520782470703125,
+            "offsetX": 68.21875
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 100,
+            "offsetX": 322,
+            "frame": [
+                6
+            ]
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                6
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                6
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "v"
+        },
+        {
+            "type": "keyUp",
+            "key": "v",
+            "frame": [
+                6
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                6
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-definition\"]"
+                ],
+                [
+                    "pierce/#tab-definition"
+                ],
+                [
+                    "text/Definitions"
+                ]
+            ],
+            "offsetY": 17.052078247070312,
+            "offsetX": 38.67706298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 86,
+            "offsetX": 544,
+            "frame": [
+                7
+            ]
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                7
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                7
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "v"
+        },
+        {
+            "type": "keyUp",
+            "key": "v",
+            "frame": [
+                7
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                7
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-historicalNote\"]"
+                ],
+                [
+                    "pierce/#tab-historicalNote"
+                ],
+                [
+                    "text/Historical Note"
+                ]
+            ],
+            "offsetY": 19.052078247070312,
+            "offsetX": 46.17706298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"pane-historicalNote\"]/div/div[1]/button"
+                ],
+                [
+                    "pierce/#pane-historicalNote button"
+                ]
+            ],
+            "offsetY": 9.05206298828125,
+            "offsetX": 23.4166259765625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-136\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-136"
+                ],
+                [
+                    "text/08/04/2026"
+                ]
+            ],
+            "offsetY": 11.05206298828125,
+            "offsetX": 75
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-133\"]/div/div[1]/div/div[2]/table/tbody/tr[5]/td[4]/div/span"
+                ],
+                [
+                    "pierce/#el-id-1383-133 tr:nth-of-type(5) > td:nth-of-type(4) span"
+                ]
+            ],
+            "offsetY": 11.666656494140625,
+            "offsetX": 5.0208282470703125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-exerpt\"]"
+                ],
+                [
+                    "pierce/#tab-exerpt"
+                ],
+                [
+                    "text/Excerpt"
+                ]
+            ],
+            "offsetY": 29.05206298828125,
+            "offsetX": 24.59375
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath//html"
+                ],
+                [
+                    "pierce/html"
+                ]
+            ],
+            "offsetY": 82,
+            "offsetX": 686,
+            "frame": [
+                8
+            ]
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                8
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "frame": [
+                8
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "key": "v"
+        },
+        {
+            "type": "keyUp",
+            "key": "v",
+            "frame": [
+                8
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "frame": [
+                8
+            ],
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation"
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[3]/div[2]/div/div/div/div[1]/div/span[2]/i/svg"
+                ],
+                [
+                    "pierce/span.el-tabs__nav-next svg"
+                ]
+            ],
+            "offsetY": 4.385406494140625,
+            "offsetX": 4.6666259765625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-metaAi\"]"
+                ],
+                [
+                    "pierce/#tab-metaAi"
+                ],
+                [
+                    "text/Meta Tags"
+                ]
+            ],
+            "offsetY": 20.05206298828125,
+            "offsetX": 35.020751953125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-62\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-62"
+                ]
+            ],
+            "offsetY": 19.05206298828125,
+            "offsetX": 213.66665649414062
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-40\"]/div/div/div[1]/ul/div/div[1]/div[1]/i/svg"
+                ],
+                [
+                    "pierce/#el-id-1383-40 ul > div > div:nth-of-type(1) > div.el-tree-node__content svg"
+                ]
+            ],
+            "offsetY": 0.33331298828125,
+            "offsetX": 8.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-40\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[2]/div[1]/li/span"
+                ],
+                [
+                    "pierce/#el-id-1383-40 div.is-expanded > div.el-tree-node__children > div:nth-of-type(2) span"
+                ],
+                [
+                    "text/Fishing and Wildlife"
+                ]
+            ],
+            "offsetY": 4,
+            "offsetX": 50.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-40\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[3]/div[1]/li/span"
+                ],
+                [
+                    "pierce/#el-id-1383-40 div.is-expanded div:nth-of-type(3) span"
+                ],
+                [
+                    "text/Forestry and"
+                ]
+            ],
+            "offsetY": 12,
+            "offsetX": 30.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"pane-metaAi\"]"
+                ],
+                [
+                    "pierce/#pane-metaAi"
+                ]
+            ],
+            "offsetY": 213.0520782470703,
+            "offsetX": 238
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-63\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-63"
+                ]
+            ],
+            "offsetY": 15.05206298828125,
+            "offsetX": 80.66665649414062
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-41\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[1]/div[1]/li"
+                ],
+                [
+                    "pierce/#el-id-1383-41 div.el-tree-node__children > div:nth-of-type(1) li"
+                ]
+            ],
+            "offsetY": 16.666656494140625,
+            "offsetX": 34.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"pane-metaAi\"]"
+                ],
+                [
+                    "pierce/#pane-metaAi"
+                ]
+            ],
+            "offsetY": 341.0520782470703,
+            "offsetX": 216
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-64\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-64"
+                ]
+            ],
+            "offsetY": 18.385406494140625,
+            "offsetX": 36.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-42\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[7]/div[1]/li/span"
+                ],
+                [
+                    "pierce/#el-id-1383-42 div:nth-of-type(7) span"
+                ],
+                [
+                    "text/Internal Policy"
+                ]
+            ],
+            "offsetY": 1.33331298828125,
+            "offsetX": 29.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-65\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-65"
+                ]
+            ],
+            "offsetY": 16.385406494140625,
+            "offsetX": 60.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-43\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[5]/div[1]/li/span"
+                ],
+                [
+                    "pierce/#el-id-1383-43 div:nth-of-type(5) span"
+                ],
+                [
+                    "text/Counter-Terrorism"
+                ]
+            ],
+            "offsetY": 5.33331298828125,
+            "offsetX": 61.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-66\"]"
+                ],
+                [
+                    "pierce/#el-id-1383-66"
+                ]
+            ],
+            "offsetY": 4.3853759765625,
+            "offsetX": 62.666656494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1383-44\"]/div/div/div[1]/ul/div/div[1]/div[2]/div[5]/div[1]/li/span"
+                ],
+                [
+                    "pierce/#el-id-1383-44 div:nth-of-type(5) span"
+                ],
+                [
+                    "text/Financial Penalty – High"
+                ]
+            ],
+            "offsetY": 13.33331298828125,
+            "offsetX": 64.66665649414062
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[3]/div[1]/div/button[1]"
+                ],
+                [
+                    "pierce/div.editor-container > div.form-section button.el-button--primary"
+                ]
+            ],
+            "offsetY": 0.05206298828125,
+            "offsetX": 46.447906494140625
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[2]/div[3]/div[1]/div/button[4]"
+                ],
+                [
+                    "pierce/div.form-section button:nth-of-type(4)"
+                ]
+            ],
+            "offsetY": 21.05206298828125,
+            "offsetX": 47.05206298828125
+        },
+        {
+            "type": "click",
+            "target": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "selectors": [
+                [
+                    "xpath//html/body/div[12]/div/div/div[3]/button[2]/span"
+                ],
+                [
+                    "pierce/div.el-overlay button.el-button--primary > span"
+                ],
+                [
+                    "text/Yes, Publish"
+                ]
+            ],
+            "offsetY": 0.33331298828125,
+            "offsetX": 49.34375
+        }
+    ]
+}

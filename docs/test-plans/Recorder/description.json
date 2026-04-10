@@ -1,0 +1,172 @@
+{
+    "title": "description recording",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 744,
+            "height": 665,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://cert-comply.content.aws.lexis.com/content-center/subobligationCreation",
+                    "title": "Subobligation Creation - Regulatory Compliance"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-descriptionDirectional\"]"
+                ],
+                [
+                    "pierce/#tab-descriptionDirectional"
+                ],
+                [
+                    "text/Description"
+                ]
+            ],
+            "offsetY": 14.15625,
+            "offsetX": 30.322906494140625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]/p"
+                ],
+                [
+                    "pierce/p"
+                ]
+            ],
+            "offsetY": 14,
+            "offsetX": 124,
+            "frame": [
+                1
+            ]
+        },
+        {
+            "type": "change",
+            "value": "this is description for testing you have good value",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]"
+                ],
+                [
+                    "pierce/#tinymce"
+                ]
+            ],
+            "frame": [
+                1
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-descriptionQuestional\"]"
+                ],
+                [
+                    "pierce/#tab-descriptionQuestional"
+                ],
+                [
+                    "text/Compliance Question"
+                ]
+            ],
+            "offsetY": 21.15625,
+            "offsetX": 21.041656494140625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]/p"
+                ],
+                [
+                    "pierce/p"
+                ]
+            ],
+            "offsetY": 10,
+            "offsetX": 81,
+            "frame": [
+                2
+            ]
+        },
+        {
+            "type": "change",
+            "value": "this is complaince question for testing",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]"
+                ],
+                [
+                    "pierce/#tinymce"
+                ]
+            ],
+            "frame": [
+                2
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tab-practicalGuidance\"]"
+                ],
+                [
+                    "pierce/#tab-practicalGuidance"
+                ]
+            ],
+            "offsetY": 17.15625,
+            "offsetX": 7.822906494140625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]/p"
+                ],
+                [
+                    "pierce/p"
+                ]
+            ],
+            "offsetY": 5,
+            "offsetX": 138,
+            "frame": [
+                3
+            ]
+        },
+        {
+            "type": "change",
+            "value": "this is guidence for testing",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"tinymce\"]"
+                ],
+                [
+                    "pierce/#tinymce"
+                ]
+            ],
+            "frame": [
+                3
+            ],
+            "target": "main"
+        }
+    ]
+}

@@ -1,14 +1,38 @@
 {
-  "name": "web-aitesters-1-fin",
+  "name": "ai-playwright-test-automation",
   "version": "1.0.0",
-  "description": "",
+  "description": "AI-Driven Test Generation with Playwright and MCP Agents",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
+  "scripts": {
+    "test": "playwright test",
+    "test:e2e": "playwright test tests/e2e",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:examples": "playwright test tests/examples",
+    "generate:login": "ts-node src/workflows/generate-test.ts login",
+    "generate:export": "ts-node src/workflows/generate-test.ts export",
+    "generate:batch": "ts-node src/workflows/generate-test.ts batch",
+    "demo": "ts-node scripts/demo.ts",
+    "restructure": "powershell -ExecutionPolicy Bypass -File scripts/restructure.ps1",
+    "clean": "rimraf test-results playwright-report",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "ai",
+    "automation",
+    "mcp",
+    "test-generation",
+    "e2e"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.57.0",
-    "@types/node": "^24.10.1"
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

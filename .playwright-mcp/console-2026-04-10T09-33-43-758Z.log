@@ -1,0 +1,6 @@
+[    6389ms] [LOG] RouterBit init @ https://cert-comply.content.aws.lexis.com/js/app.175e3ae3.js:0
+[    6389ms] [LOG] BASE URL / @ https://cert-comply.content.aws.lexis.com/js/app.175e3ae3.js:0
+[    6769ms] [LOG] vue-diff loaded successfully @ https://cert-comply.content.aws.lexis.com/js/app.175e3ae3.js:0
+[   96158ms] [LOG] Mock user role Editor @ https://cert-comply.content.aws.lexis.com/js/app.175e3ae3.js:0
+[   98821ms] [LOG] queryParams:  page=1&size=10 @ https://cert-comply.content.aws.lexis.com/js/9672.a15943ff.js:0
+[  100428ms] [LOG] API Data obligations:  {content: Array(10), pageable: Object, totalPages: 1979, totalElements: 19788, last: false} @ https://cert-comply.content.aws.lexis.com/js/9672.a15943ff.js:0
