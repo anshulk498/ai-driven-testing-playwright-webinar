@@ -1,16 +1,18 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  timeout: 10_000,
+  timeout: 600000,
   testDir: './tests',
-  fullyParallel: true,
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  workers: 1,
   reporter: [['html', { open: 'never' }]],
   use: {
-    baseURL: 'http://localhost:3000/',
+    baseURL: 'https://cert-comply.content.aws.lexis.com',
     trace: 'on-first-retry',
+    headless: false,
+    viewport: { width: 1280, height: 900 },
   },
   projects: [
     {
