@@ -5,20 +5,29 @@
       "command": "npx",
       "args": ["@playwright/mcp@latest"]
     },
-    "playwright-test": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["playwright", "run-test-mcp-server"]
-    },
     "filesystem": {
       "type": "stdio",
       "command": "npx",
-      "args": ["@modelcontextprotocol/server-filesystem"]
+      "args": [
+        "@modelcontextprotocol/server-filesystem",
+        "c:\\Users\\kamboja1\\Downloads\\ai-driven-testing-playwright-webinar - Copy"
+      ]
     },
     "github": {
       "type": "stdio",
       "command": "npx",
-      "args": ["@modelcontextprotocol/server-github"]
+      "args": ["@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:githubToken}"
+      }
     }
-  }
+  },
+  "inputs": [
+    {
+      "id": "githubToken",
+      "type": "promptString",
+      "description": "GitHub Personal Access Token (repo scope)",
+      "password": true
+    }
+  ]
 }
