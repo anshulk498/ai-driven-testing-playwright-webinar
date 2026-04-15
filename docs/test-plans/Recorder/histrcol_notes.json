@@ -1,0 +1,194 @@
+{
+    "title": "histrcol notes",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 638,
+            "height": 665,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://cert-comply.content.aws.lexis.com/sso",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://cert-comply.content.aws.lexis.com/sso",
+                    "title": "Single Sign On - Regulatory Compliance"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[3]/div/button/span"
+                ],
+                [
+                    "pierce/div.form-item span"
+                ],
+                [
+                    "text/Developer Login"
+                ]
+            ],
+            "offsetY": 10.53125,
+            "offsetX": 109.40625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1040-1\"]/div/ul/li[1]"
+                ],
+                [
+                    "pierce/#el-id-1040-1 li:nth-of-type(1)"
+                ],
+                [
+                    "text/Historical Notes"
+                ]
+            ],
+            "offsetY": 25,
+            "offsetX": 88
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1040-279\"]"
+                ],
+                [
+                    "pierce/#el-id-1040-279"
+                ]
+            ],
+            "offsetY": 5.5,
+            "offsetX": 103
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1040-274\"]/div/div/div[1]/ul/li[5]/span"
+                ],
+                [
+                    "pierce/li.hover > span"
+                ],
+                [
+                    "text/Aged Care"
+                ]
+            ],
+            "offsetY": 5.291656494140625,
+            "offsetX": 41
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1040-281\"]"
+                ],
+                [
+                    "pierce/#el-id-1040-281"
+                ]
+            ],
+            "offsetY": 8,
+            "offsetX": 88
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1040-276\"]/div/div[1]/div/div[2]/table/tbody/tr[5]/td[4]/div/span"
+                ],
+                [
+                    "pierce/#el-id-1040-276 tr:nth-of-type(5) > td:nth-of-type(4) span"
+                ]
+            ],
+            "offsetY": 3.33331298828125,
+            "offsetX": 9.02081298828125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[3]/div[2]/div[1]/div"
+                ],
+                [
+                    "pierce/div.filters-section > div"
+                ],
+                [
+                    "text/ModuleFrom DateTo"
+                ]
+            ],
+            "offsetY": 114,
+            "offsetX": 357
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1040-282\"]"
+                ],
+                [
+                    "pierce/#el-id-1040-282"
+                ]
+            ],
+            "offsetY": 21,
+            "offsetX": 113
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"el-id-1040-277\"]/div/div/div[1]/ul/li[2]/span"
+                ],
+                [
+                    "pierce/#el-id-1040-277 li.hover > span"
+                ]
+            ],
+            "offsetY": 6.072906494140625,
+            "offsetX": 41.33331298828125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[3]/div[2]/div[1]/div/div[5]/button/span"
+                ],
+                [
+                    "pierce/#au_legislation_cms_app div:nth-of-type(5) span"
+                ],
+                [
+                    "text/GO"
+                ]
+            ],
+            "offsetY": 3,
+            "offsetX": 15
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"au_legislation_cms_app\"]/div/div/div[3]/div[2]/div[1]/div/div[6]/button"
+                ],
+                [
+                    "pierce/div:nth-of-type(6) > button"
+                ]
+            ],
+            "offsetY": 9,
+            "offsetX": 28.625
+        }
+    ]
+}

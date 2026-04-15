@@ -1,0 +1,71 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e7] [cursor=pointer]:
+      - img "Logo" [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]: Lexis+ Content Platform
+        - generic [ref=e11]: Regulatory Compliance
+    - generic [ref=e13]: Tool Creation
+    - generic [ref=e14]:
+      - button "AI Assistant" [ref=e15] [cursor=pointer]:
+        - generic [ref=e16]:
+          - img [ref=e18]
+          - text: AI Assistant
+      - button "Publishing Queue" [ref=e21] [cursor=pointer]:
+        - generic [ref=e22]:
+          - img [ref=e24]
+          - text: Publishing Queue
+      - button "MU" [ref=e26] [cursor=pointer]:
+        - generic [ref=e27]: MU
+  - generic [ref=e28]:
+    - generic [ref=e31]:
+      - generic [ref=e36] [cursor=pointer]:
+        - textbox "Select module" [ref=e37]
+        - img [ref=e40]
+      - generic [ref=e46]:
+        - textbox "Select topic" [disabled] [ref=e47]
+        - img [ref=e50]
+      - generic [ref=e56]:
+        - textbox "Select obligation" [disabled] [ref=e57]
+        - img [ref=e60]
+      - generic [ref=e66]:
+        - textbox "Select subobligation" [disabled] [ref=e67]
+        - img [ref=e70]
+      - button "Add" [ref=e73] [cursor=pointer]:
+        - img [ref=e75]
+        - generic [ref=e77]: Add
+    - generic [ref=e79]:
+      - generic [ref=e82]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: "* Title"
+          - textbox "* Title" [ref=e89]:
+            - /placeholder: Enter title
+        - generic [ref=e91]:
+          - generic [ref=e92]: "* Tool Functions"
+          - generic [ref=e97] [cursor=pointer]:
+            - textbox "* Tool Functions" [ref=e98]:
+              - /placeholder: Select Tool Functions
+            - img [ref=e101]
+        - generic [ref=e104]:
+          - generic [ref=e105]: "* Category"
+          - generic [ref=e110] [cursor=pointer]:
+            - textbox "* Category" [ref=e111]:
+              - /placeholder: Select Category
+            - img [ref=e114]
+        - generic [ref=e117]:
+          - generic [ref=e118]: "* Jurisdictions"
+          - generic [ref=e121]:
+            - textbox [ref=e123]
+            - generic [ref=e125] [cursor=pointer]:
+              - textbox "* Jurisdictions" [ref=e126]:
+                - /placeholder: Select Jurisdictions
+              - img [ref=e129]
+      - generic [ref=e131]:
+        - button "Create" [ref=e132] [cursor=pointer]:
+          - generic [ref=e133]: Create
+        - button "Previous Draft" [disabled] [ref=e134]:
+          - generic [ref=e135]: Previous Draft
+        - button "Revert Changes" [disabled] [ref=e136]:
+          - generic [ref=e137]: Revert Changes
+        - button "Publish" [disabled] [ref=e138]:
+          - generic [ref=e139]: Publish
