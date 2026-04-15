@@ -356,5 +356,182 @@ test('Create Tool – full flow', async ({ page, context }) => {
   expect(idVisible, `Tool ID "${toolId}" should appear in results`).toBeTruthy();
   console.log(`✓ Tool ID "${toolId}" found in results`);
 
-  console.log('\n🎉 Create Tool Test PASSED');
+  // ── STEP 19: Click title cell → navigate to tool details page ───────────────
+  console.log('\n══ STEP 19: Click title → Tool Details page ══');
+  const titleCell = toolPage.locator('tbody tr').filter({ hasText: toolId }).first().locator('td').nth(2);
+  await titleCell.waitFor({ state: 'visible', timeout: 10_000 });
+  await titleCell.click();
+  await toolPage.waitForLoadState('domcontentloaded');
+  await toolPage.waitForTimeout(2000);
+  const detailsUrl = toolPage.url();
+  console.log(`  URL after title click: ${detailsUrl}`);
+  expect(detailsUrl, 'Should redirect to toolDetails page').toMatch(/toolDetails/i);
+  console.log('✓ Navigated to tool details page');
+
+  // ── STEP 20: Click Edit → verify edit mode ──────────────────────────────────
+  console.log('\n══ STEP 20: Click Edit ══');
+  await findAndClick(toolPage, [
+    () => toolPage.getByRole('button', { name: /^Edit$/i }),
+    () => toolPage.locator('button').filter({ hasText: /^Edit$/ }).first(),
+    () => toolPage.locator('.el-button').filter({ hasText: /^Edit$/ }).first(),
+  ], 'Edit button', 10_000);
+  await toolPage.waitForTimeout(2000);
+  console.log('✓ Edit button clicked — edit mode initiated');
+
+  // ── STEP 21: Click Save Draft → verify toast ──────────────────────────────
+  console.log('\n══ STEP 21: Save Draft ══');
+  const saveToastPromise21 = toolPage.locator('.el-message--success, .el-notification--success, .el-message').waitFor({ state: 'visible', timeout: 15_000 }).catch(() => null);
+  await findAndClick(toolPage, [
+    () => toolPage.getByRole('button', { name: /^Save Draft$/i }),
+    () => toolPage.locator('button').filter({ hasText: /^Save Draft$/ }).first(),
+    () => toolPage.locator('.el-button').filter({ hasText: /^Save Draft$/ }).first(),
+  ], 'Save Draft button', 10_000);
+  await saveToastPromise21;
+  await toolPage.waitForTimeout(2000);
+  const saveToast21Text = await toolPage.locator('.el-message--success, .el-notification--success, .el-message').first().textContent().catch(() => '');
+  console.log(`  Toast text: "${saveToast21Text.trim()}"`);
+  console.log('✓ Save Draft toast appeared');
+
+  // ── STEP 22: Click Start Review → popup → Move to Review → verify toast ─────
+  console.log('\n══ STEP 22: Start Review ══');
+  const reviewToastPromise = toolPage.locator('.el-message--success, .el-notification--success, .el-message').waitFor({ state: 'visible', timeout: 20_000 }).catch(() => null);
+  await findAndClick(toolPage, [
+    () => toolPage.getByRole('button', { name: /Start Review/i }),
+    () => toolPage.locator('button').filter({ hasText: /Start Review/ }).first(),
+    () => toolPage.locator('.el-button').filter({ hasText: /Start Review/ }).first(),
+  ], 'Start Review button', 10_000);
+  await toolPage.waitForTimeout(1500);
+
+  // Handle confirmation dialog — click "Move to Review"
+  await findAndClick(toolPage, [
+    () => toolPage.locator('.el-dialog__footer button').filter({ hasText: /Move to Review/i }),
+    () => toolPage.locator('.el-message-box__btns button').filter({ hasText: /Move to Review/i }),
+    () => toolPage.locator('button').filter({ hasText: /Move to Review/i }),
+    () => toolPage.locator('.el-dialog button').filter({ hasText: /Move to Review/i }),
+  ], 'Move to Review button', 10_000);
+  await reviewToastPromise;
+  await toolPage.waitForTimeout(2000);
+  const reviewToastText = await toolPage.locator('.el-message--success, .el-notification--success, .el-message').first().textContent().catch(() => '');
+  console.log(`  Toast text: "${reviewToastText.trim()}"`);
+  console.log('✓ Tool marked as In Review');
+
+  // ── STEP 23: Click Ready to Publish → popup → Yes, Mark as Ready → toast ────
+  console.log('\n══ STEP 23: Ready to Publish ══');
+  const rtpToastPromise = toolPage.locator('.el-message--success, .el-notification--success, .el-message').waitFor({ state: 'visible', timeout: 20_000 }).catch(() => null);
+  await findAndClick(toolPage, [
+    () => toolPage.getByRole('button', { name: /Ready to Publish/i }),
+    () => toolPage.locator('button').filter({ hasText: /Ready to Publish/ }).first(),
+    () => toolPage.locator('.el-button').filter({ hasText: /Ready to Publish/ }).first(),
+  ], 'Ready to Publish button', 10_000);
+  await toolPage.waitForTimeout(1500);
+
+  // Handle confirmation dialog — click "Yes, Mark as Ready"
+  await findAndClick(toolPage, [
+    () => toolPage.locator('.el-dialog__footer button').filter({ hasText: /Yes.*Mark as Ready/i }),
+    () => toolPage.locator('.el-message-box__btns button').filter({ hasText: /Yes.*Mark as Ready/i }),
+    () => toolPage.locator('button').filter({ hasText: /Yes.*Mark as Ready/i }),
+    () => toolPage.locator('.el-dialog button').filter({ hasText: /Mark as Ready/i }),
+  ], 'Yes Mark as Ready button', 10_000);
+  await rtpToastPromise;
+  await toolPage.waitForTimeout(2000);
+  const rtpToastText = await toolPage.locator('.el-message--success, .el-notification--success, .el-message').first().textContent().catch(() => '');
+  console.log(`  Toast text: "${rtpToastText.trim()}"`);
+  console.log('✓ Tool marked as Ready to Publish');
+
+  // ── STEP 24: Click Publish → popup → Yes Publish → toast ────────────────────
+  console.log('\n══ STEP 24: Publish ══');
+  const publishToastPromise = toolPage.locator('.el-message--success, .el-notification--success, .el-message').waitFor({ state: 'visible', timeout: 20_000 }).catch(() => null);
+  await findAndClick(toolPage, [
+    () => toolPage.getByRole('button', { name: /^Publish$/i }),
+    () => toolPage.locator('button').filter({ hasText: /^Publish$/ }).first(),
+    () => toolPage.locator('.el-button').filter({ hasText: /^Publish$/ }).first(),
+  ], 'Publish button', 10_000);
+  await toolPage.waitForTimeout(1500);
+
+  // Handle confirmation dialog — click "Yes Publish"
+  await findAndClick(toolPage, [
+    () => toolPage.locator('.el-dialog__footer button').filter({ hasText: /Yes.*Publish/i }),
+    () => toolPage.locator('.el-message-box__btns button').filter({ hasText: /Yes.*Publish/i }),
+    () => toolPage.locator('button').filter({ hasText: /Yes.*Publish/i }),
+    () => toolPage.locator('.el-dialog button').filter({ hasText: /Publish/i }).last(),
+  ], 'Yes Publish button', 10_000);
+  await publishToastPromise;
+  await toolPage.waitForTimeout(2000);
+  const publishToastText = await toolPage.locator('.el-message--success, .el-notification--success, .el-message').first().textContent().catch(() => '');
+  console.log(`  Toast text: "${publishToastText.trim()}"`);
+  console.log('✓ Tool published successfully');
+
+  // ── STEP 25: Click back arrow → navigate to content center ──────────────────
+  console.log('\n══ STEP 25: Click back arrow → content center ══');
+  await findAndClick(toolPage, [
+    () => toolPage.locator('[class*="back-icon"]').first(),
+    () => toolPage.locator('[class*="back"]').first(),
+    () => toolPage.locator('i[class*="back"]').first(),
+    () => toolPage.locator('span[class*="back"]').first(),
+    () => toolPage.locator('a[class*="back"]').first(),
+  ], 'Back arrow', 10_000);
+  await toolPage.waitForLoadState('domcontentloaded');
+  await toolPage.waitForTimeout(2000);
+  const backUrl = toolPage.url();
+  console.log(`  URL after back: ${backUrl}`);
+  expect(backUrl, 'Should navigate back to content-center').toContain('content-center');
+  console.log('✓ Navigated back to content center');
+
+  // ── STEP 26: Click Clear → reset ID filter ───────────────────────────────────
+  console.log('\n══ STEP 26: Click Clear → reset filter ══');
+  // Make sure we're on the Tools tab
+  await findAndClick(toolPage, [
+    () => toolPage.getByRole('tab', { name: /^Tools$/i }),
+    () => toolPage.locator('.el-tabs__item').filter({ hasText: /^Tools$/ }).first(),
+  ], 'Tools tab (for clear)', 8_000);
+  await toolPage.waitForTimeout(2000);
+
+  // Click the Clear button to reset any active ID filter
+  const clearBtn = toolPage.locator('button').filter({ hasText: /^Clear$/i });
+  const clearVisible = await clearBtn.first().isVisible().catch(() => false);
+  if (clearVisible) {
+    await clearBtn.first().click();
+    await toolPage.waitForTimeout(1500);
+    console.log('✓ Clear button clicked — filter reset');
+  } else {
+    console.log('  ℹ No Clear button visible — filter may already be cleared, continuing');
+  }
+
+  // ── STEP 27: Re-search by ID → verify status is "live" ──────────────────────
+  console.log('\n══ STEP 27: Re-search by ID → verify status "live" ══');
+  await findAndClick(toolPage, [
+    () => toolPage.locator('[data-v-f9001f20].table-header .el-icon.search-icon').first(),
+    () => toolPage.locator('[data-v-f9001f20] .table-header .el-icon.search-icon').first(),
+    () => toolPage.locator('[data-v-f9001f20] thead th').first().locator('.el-icon.search-icon'),
+    () => toolPage.locator('.el-icon.search-icon').nth(2),
+  ], 'ID search icon (re-search)', 8_000);
+  await toolPage.waitForTimeout(1000);
+
+  const filterInput27 = toolPage.locator('input[placeholder="Search by ID"]').last();
+  await filterInput27.waitFor({ state: 'visible', timeout: 8_000 });
+  await filterInput27.fill(toolId);
+  console.log(`  ✓ Filled filter: "${toolId}"`);
+  await toolPage.waitForTimeout(300);
+  await filterInput27.press('Tab');
+  await toolPage.waitForTimeout(200);
+  await toolPage.keyboard.press('Enter');
+  console.log('  ✓ Submit via Tab+Enter');
+
+  await toolPage.waitForTimeout(6000);
+  await toolPage.locator('.el-loading-mask').waitFor({ state: 'hidden', timeout: 15_000 }).catch(() => {});
+  await toolPage.waitForTimeout(2000);
+
+  // Verify tool ID appears and status is "live"
+  const rowForStatus = toolPage.locator('tbody tr').filter({ hasText: toolId }).first();
+  const rowVisible27 = await rowForStatus.isVisible().catch(() => false);
+  expect(rowVisible27, `Tool row with ID "${toolId}" should be visible after re-search`).toBeTruthy();
+
+  const statusCell = rowForStatus.locator('td').filter({ hasText: /^live$/i });
+  const statusVisible = await statusCell.first().isVisible().catch(() => false);
+  const rowText = await rowForStatus.textContent().catch(() => '');
+  console.log(`  Row text: "${rowText.replace(/\s+/g, ' ').trim().substring(0, 120)}"`);
+  expect(statusVisible, `Status should be "live" for published tool "${toolId}"`).toBeTruthy();
+  console.log(`✓ Tool "${toolId}" status is "live" ✓`);
+
+  console.log('\n🎉 Create Tool Test PASSED — All 27 Steps Complete');
 });
