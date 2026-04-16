@@ -63,10 +63,12 @@ export class DashboardPage extends BasePage {
 
   /** Export the currently active tab's data. Returns download filename. */
   async clickExport(): Promise<string | null> {
+    // Wait for any loading spinner to finish before checking Export button
+    await this.waitForLoader(30_000);
     const exportBtn = await this.findLocator([
       () => this.page.getByRole('button', { name: 'Export', exact: true }),
       () => this.page.locator('button').filter({ hasText: /^Export$/ }).first(),
-    ], 'Export button');
+    ], 'Export button', 15_000);
     await expect(exportBtn).toBeEnabled({ timeout: 10_000 });
     const downloadPromise = this.page.waitForEvent('download', { timeout: 60_000 }).catch(() => null);
     await exportBtn.click();

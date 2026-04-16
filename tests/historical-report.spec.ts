@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../../pages/LoginPage';
-import { ReportPage } from '../../pages/ReportPage';
-import { assertTableHasData, assertUrl } from '../../utils/helpers';
-import { REPORT_ITEMS, REPORT_DATA } from '../../utils/testData';
+import { LoginPage } from '../pages/LoginPage';
+import { ReportPage } from '../pages/ReportPage';
+import { assertTableHasData, assertUrl } from '../utils/helpers';
+import { REPORT_ITEMS, REPORT_DATA } from '../test-data/testData';
 
 test.describe('Historical Notes Report', () => {
   test('full flow – select module, date, type, GO, export', async ({ page }) => {

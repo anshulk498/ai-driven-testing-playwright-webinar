@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../../pages/LoginPage';
-import { DashboardPage } from '../../pages/DashboardPage';
-import { assertUrl } from '../../utils/helpers';
+import { LoginPage } from '../pages/LoginPage';
+import { DashboardPage } from '../pages/DashboardPage';
+import { assertUrl } from '../utils/helpers';
 
 test.describe('Obligation Export', () => {
   test('login → obligations tab → export → verify download', async ({ page }) => {

@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../../pages/LoginPage';
-import { DashboardPage } from '../../pages/DashboardPage';
-import { ToolPage } from '../../pages/ToolPage';
-import { assertUrl } from '../../utils/helpers';
-import { URLS, TOOL_DATA } from '../../utils/testData';
+import { LoginPage } from '../pages/LoginPage';
+import { DashboardPage } from '../pages/DashboardPage';
+import { ToolPage } from '../pages/ToolPage';
+import { assertUrl } from '../utils/helpers';
+import { URLS, TOOL_DATA } from '../test-data/testData';
 
 test.describe('Create Tool', () => {
   test('full workflow – create, edit, review, publish, verify live status', async ({ page }) => {

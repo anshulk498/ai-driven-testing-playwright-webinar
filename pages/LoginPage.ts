@@ -1,6 +1,6 @@
 import { Page, Locator, expect } from '@playwright/test';
 import { BasePage } from './BasePage';
-import { URLS } from '../utils/testData';
+import { URLS } from '../test-data/testData';
 
 export class LoginPage extends BasePage {
   // ─── Locators ────────────────────────────────────────────────────────────────

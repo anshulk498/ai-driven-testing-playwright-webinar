@@ -2,317 +2,161 @@
 
 ## Overview
 
-This document explains the organized structure of the AI-Driven Playwright Test Automation project.
+This document describes the clean, production-ready structure of the AI-Driven Playwright Test Automation project.
+Built using **Page Object Model (POM)** with **TypeScript** and **Playwright 1.57.0**.
 
 ---
 
 ## 🗂️ Directory Layout
 
 ```
-ai-playwright-test-automation/
+ai-driven-testing-playwright-webinar/
 │
-├── 📂 src/                          # All source code
-│   │
-│   ├── 🤖 agents/                   # AI Agent Modules
-│   │   ├── supervisor.ts            # Main orchestrator - coordinates all agents
-│   │   ├── browser-agent.ts         # UI exploration using Playwright MCP
-│   │   ├── patch-agent.ts           # Test code generation
-│   │   └── runner-agent.ts          # Test execution and validation
-│   │
-│   ├── 🔄 workflows/                # Automation Workflows
-│   │   └── generate-test.ts         # Test generation workflow examples
-│   │
-│   ├── 🛠️ utils/                    # Shared Utilities
-│   │   ├── dom-snapshot.ts          # DOM capture for test healing
-│   │   └── test-helpers.ts          # Common test helper functions
-│   │
-│   └── ⚙️ config/                   # Configuration Files
-│       ├── config.ts                # Application configuration
-│       └── mcp-config.json          # MCP server configuration
+├── 📁 pages/                        # Page Object Model classes
+│   ├── BasePage.ts                  # Base: findAndClick, waitForLoader, selectDropdown, toasts
+│   ├── LoginPage.ts                 # SSO page + Developer Login
+│   ├── DashboardPage.ts             # Tabs (Obligations/Alerts/Tools), Create, Export, Search by ID
+│   ├── ReportPage.ts                # Report menu hover/click, filters, GO, Export
+│   ├── ToolPage.ts                  # Tool creation form + workflow buttons (Edit, Save Draft, Review, Publish)
+│   └── AdminPage.ts                 # Admin menu + Record Unlock flow
 │
-├── 🧪 tests/                        # All Test Files
-│   │
-│   ├── e2e/                         # End-to-End Tests (Production)
-│   │   ├── create-alert.spec.ts
-│   │   ├── create-core-obligation.final.spec.ts
-│   │   └── verify-obligation-export.spec.ts
-│   │
-│   ├── examples/                    # Example/Demo Tests
-│   │   ├── example.spec.ts
-│   │   ├── seed.spec.ts
-│   │   └── tic-tac-toe.spec.ts
-│   │
-│   └── generated/                   # AI-Generated Tests
-│       └── [auto-generated test files]
+├── 🧪 tests/                        # All Playwright spec files (flat, POM-based)
+│   ├── alert-export.spec.ts         # Login → Alerts tab → Export → verify download
+│   ├── broken-links-report.spec.ts  # Login → Broken Links → GO → Export
+│   ├── create-tool.spec.ts          # Full 24-step tool creation + publish workflow
+│   ├── historical-report.spec.ts    # Login → Historical Notes → GO → Export
+│   ├── industry-report.spec.ts      # Login → Industry Report → GO → Export
+│   ├── obligation-export.spec.ts    # Login → Obligations tab → Export → verify download
+│   └── record-unlock.spec.ts        # Login → Admin → Record Unlock → confirm
+│
+├── 🛠️ utils/                        # Shared test utilities
+│   └── helpers.ts                   # assertToast, assertDownload, assertUrl, waitForLoader, assertTableHasData
+│
+├── 📦 test-data/                    # Test constants & input data
+│   └── testData.ts                  # URLS, TOOL_DATA, ALERT_DATA, REPORT_DATA, TOAST messages, ADMIN_ITEMS
 │
 ├── 📚 docs/                         # Documentation
-│   │
-│   ├── guides/                      # User Guides
+│   ├── PROJECT_STRUCTURE.md         # This file
+│   ├── test-plans/                  # MD test plans (one per feature)
+│   │   ├── CREATE_TOOL_TEST.md
+│   │   ├── BROKEN_LINKS_TEST.md
+│   │   ├── INDUSTRY_REPORT_TEST.md
+│   │   ├── RECORD_UNLOCK_TEST.md
+│   │   ├── SSO_Historical_Report_Test.md
+│   │   ├── ALERT_TEST_STEPS.md
+│   │   ├── CREATE_SUBOBLIGATION.md
+│   │   ├── EXPORT_TEST_SUMMARY.md
+│   │   └── TEST_PLAN.md
+│   ├── guides/                      # Setup and integration guides
 │   │   ├── GETTING_STARTED.md
-│   │   ├── BUILD_COMPLETE.md
-│   │   ├── MCP_INTEGRATION_PLAN.md
 │   │   ├── CONTENT_CENTER_GUIDE.md
-│   │   └── CONTENT_CENTER_TESTS.md
-│   │
-│   └── test-plans/                  # Test Specifications
-│       ├── TEST_PLAN.md
-│       ├── ALERT_TEST_STEPS.md
-│       └── EXPORT_TEST_SUMMARY.md
+│   │   └── MCP_INTEGRATION_PLAN.md
+│   └── artifacts/                   # Agent planning artifacts
 │
-├── 🔧 scripts/                      # Utility Scripts
-│   ├── demo.ts                      # Demo script
-│   └── restructure.ps1              # Project reorganization script
+├── 🤖 src/                          # AI Agent & workflow source (non-test)
+│   ├── agents/
+│   │   ├── supervisor.ts            # Orchestrator agent
+│   │   ├── browser-agent.ts         # UI exploration via Playwright MCP
+│   │   ├── patch-agent.ts           # Test code generation agent
+│   │   └── runner-agent.ts          # Test execution agent
+│   ├── workflows/
+│   │   └── generate-test.ts         # Test generation workflow
+│   ├── utils/
+│   │   ├── dom-snapshot.ts          # DOM capture for test healing
+│   │   └── test-helpers.ts          # Legacy helper functions
+│   └── config/
+│       ├── config.ts                # App configuration
+│       └── mcp-config.json          # MCP server config
 │
-├── 📊 test-results/                 # Test Artifacts (Generated)
-│   ├── *.png                        # Screenshots
-│   ├── dom-*.json                   # DOM snapshots
-│   └── *.xlsx                       # Downloaded files
+├── 📜 scripts/                      # Utility scripts
+│   ├── demo.ts
+│   └── restructure.ps1
 │
-├── 📈 playwright-report/            # HTML Test Reports (Generated)
+├── 🖼️ assets/                       # Static assets
 │
-├── 📦 Configuration Files
-│   ├── package.json                 # Dependencies and scripts
-│   ├── tsconfig.json                # TypeScript configuration
-│   ├── playwright.config.ts         # Playwright settings
-│   └── .gitignore                   # Git ignore rules
-│
-└── 📄 Documentation Files
-    ├── README.md                    # Main documentation
-    └── README_NEW.md                # Updated structure guide
+├── global-setup.ts                  # Global auth setup (saves storageState → auth.json)
+├── playwright.config.ts             # Playwright config (timeout, browser, baseURL)
+├── tsconfig.json                    # TypeScript configuration
+└── package.json                     # Dependencies
 ```
 
 ---
 
-## 📖 Detailed Descriptions
+## 🏗️ Architecture: Page Object Model
 
-### `/src` - Source Code
+```
+Test Spec (tests/*.spec.ts)
+    │
+    ├── uses → LoginPage       (login flow)
+    ├── uses → DashboardPage   (tab navigation, export, search)
+    ├── uses → ReportPage      (report filters, GO, export)
+    ├── uses → ToolPage        (form fill, workflow buttons)
+    └── uses → AdminPage       (admin menu, record unlock)
+              │
+              └── all extend → BasePage  (common helpers)
 
-**Purpose:** All application source code organized by function
-
-#### `/src/agents` - AI Agents
-- Core AI modules for test generation
-- Each agent has a specific responsibility
-- Modular and maintainable
-
-**Files:**
-- `supervisor.ts` - Orchestrates all agents
-- `browser-agent.ts` - Explores UI with Playwright
-- `patch-agent.ts` - Generates test code
-- `runner-agent.ts` - Executes tests
-
-#### `/src/workflows` - Workflows
-- Complete automation workflows
-- Examples of agent coordination
-- Reusable test generation patterns
-
-#### `/src/utils` - Utilities
-- Shared helper functions
-- Reusable across tests and agents
-- DOM snapshot, test helpers, etc.
-
-#### `/src/config` - Configuration
-- Centralized configuration
-- MCP server settings
-- Application constants
+Test Data  →  test-data/testData.ts   (constants consumed by specs + pages)
+Helpers    →  utils/helpers.ts        (assertion utilities used in specs)
+```
 
 ---
 
-### `/tests` - Test Files
+## 🔑 Key Design Principles
 
-**Purpose:** Organized test suite by category
-
-#### `/tests/e2e` - Production Tests
-- Real end-to-end tests
-- Production-ready
-- Comprehensive scenarios
-
-**Tests:**
-- Alert creation workflow
-- Core obligation management
-- Export functionality validation
-
-#### `/tests/examples` - Learning Examples
-- Demo tests
-- Learning materials
-- Simple examples
-
-#### `/tests/generated` - AI-Generated
-- Auto-generated by agents
-- Output directory for AI system
-- Continuously updated
+| Principle | Implementation |
+|-----------|---------------|
+| **No hard waits** | `expect(locator).toBeVisible()` / `locator.waitFor()` only |
+| **No locators in tests** | All locators live in page classes only |
+| **No assertions in pages** | Pages contain only actions + locators |
+| **Multi-fallback locators** | `findAndClick([...4 selectors...])` for resilience |
+| **DRY login** | `LoginPage.loginAsDeveloper()` reused across all specs |
+| **Typed constants** | `testData.ts` with `as const` for all strings/values |
 
 ---
 
-### `/docs` - Documentation
+## ▶️ Running Tests
 
-**Purpose:** All project documentation
+```bash
+# Run all tests
+npx playwright test
 
-#### `/docs/guides` - User Guides
-- How-to documentation
-- Setup instructions
-- Integration guides
+# Run a specific spec
+npx playwright test tests/create-tool.spec.ts
 
-#### `/docs/test-plans` - Test Specifications
-- Test requirements
-- Step-by-step plans
-- Expected results
+# Run with visible browser
+npx playwright test --headed
 
----
-
-### `/scripts` - Utility Scripts
-
-**Purpose:** Helper scripts for development
-
-**Scripts:**
-- `demo.ts` - Demonstration of AI system
-- `restructure.ps1` - Project reorganization
+# Run with HTML report
+npx playwright test --reporter=html
+```
 
 ---
 
-## 🎯 Why This Structure?
+## 📋 Test Coverage
 
-### ✅ Benefits
-
-1. **Clear Separation of Concerns**
-   - Source code vs tests vs docs
-   - Easy to navigate
-
-2. **Scalability**
-   - Easy to add new agents
-   - New test categories simple to create
-
-3. **Maintainability**
-   - Related files grouped together
-   - TypeScript path aliases
-
-4. **Professional**
-   - Industry standard structure
-   - CI/CD friendly
-
-5. **Developer Experience**
-   - IntelliSense works perfectly
-   - Import paths are clear
+| Spec | Feature | Steps |
+|------|---------|-------|
+| `create-tool.spec.ts` | Full tool creation + publish workflow | 24 |
+| `broken-links-report.spec.ts` | Broken Links report + export | 11 |
+| `industry-report.spec.ts` | Industry Report + export | 11 |
+| `historical-report.spec.ts` | Historical Notes report + export | 9 |
+| `alert-export.spec.ts` | Alerts tab export | 5 |
+| `obligation-export.spec.ts` | Obligations tab export | 5 |
+| `record-unlock.spec.ts` | Admin → Record Unlock | 9 |
 
 ---
 
 ## 📝 File Naming Conventions
 
-### Tests
-- Pattern: `{feature}.spec.ts`
-- Example: `create-alert.spec.ts`
-
-### Agents
-- Pattern: `{name}-agent.ts`
-- Example: `browser-agent.ts`
-
-### Utilities
-- Pattern: `{purpose}.ts`
-- Example: `dom-snapshot.ts`
-
-### Documentation
-- Pattern: `{TOPIC}_DESCRIPTION.md`
-- Example: `GETTING_STARTED.md`
+| File Type | Pattern | Example |
+|-----------|---------|---------|
+| Page class | `{Name}Page.ts` | `ToolPage.ts` |
+| Spec file | `{feature}.spec.ts` | `create-tool.spec.ts` |
+| Test data | `testData.ts` | constants only |
+| Helpers | `helpers.ts` | assertion utilities |
+| Test plan | `{FEATURE}_TEST.md` | `CREATE_TOOL_TEST.md` |
 
 ---
 
-## 🔄 Import Paths
-
-With TypeScript path aliases:
-
-```typescript
-// Before (relative paths)
-import { BrowserAgent } from '../../src/agents/browser-agent';
-
-// After (aliases)
-import { BrowserAgent } from '@agents/browser-agent';
-import { captureDOMSnapshot } from '@utils/dom-snapshot';
-import Config from '@config/config';
-```
-
-**Configured in `tsconfig.json`:**
-```json
-{
-  "paths": {
-    "@agents/*": ["src/agents/*"],
-    "@utils/*": ["src/utils/*"],
-    "@config/*": ["src/config/*"],
-    "@workflows/*": ["src/workflows/*"]
-  }
-}
-```
-
----
-
-## 🚀 Migration Guide
-
-To restructure an existing project:
-
-```bash
-npm run restructure
-```
-
-This script:
-1. ✅ Moves agents to `src/agents/`
-2. ✅ Moves workflows to `src/workflows/`
-3. ✅ Organizes tests by category
-4. ✅ Moves docs to proper folders
-5. ✅ Cleans up empty directories
-
----
-
-## 📂 What Goes Where?
-
-| File Type | Location | Example |
-|-----------|----------|---------|
-| AI Agent | `src/agents/` | `supervisor.ts` |
-| Workflow | `src/workflows/` | `generate-test.ts` |
-| Utility | `src/utils/` | `dom-snapshot.ts` |
-| Config | `src/config/` | `config.ts` |
-| E2E Test | `tests/e2e/` | `create-alert.spec.ts` |
-| Example Test | `tests/examples/` | `example.spec.ts` |
-| Generated Test | `tests/generated/` | `login-flow.spec.ts` |
-| Guide | `docs/guides/` | `GETTING_STARTED.md` |
-| Test Plan | `docs/test-plans/` | `ALERT_TEST_STEPS.md` |
-| Script | `scripts/` | `demo.ts` |
-
----
-
-## 🎓 Best Practices
-
-### Adding New Features
-
-1. **New Agent:**
-   - Create in `src/agents/`
-   - Export in index file
-   - Add to supervisor
-
-2. **New Test:**
-   - E2E → `tests/e2e/`
-   - Example → `tests/examples/`
-   - Use utilities from `src/utils/`
-
-3. **New Utility:**
-   - Create in `src/utils/`
-   - Export functions
-   - Add tests if complex
-
-4. **Documentation:**
-   - Guides → `docs/guides/`
-   - Plans → `docs/test-plans/`
-
----
-
-## ✅ Checklist for Clean Structure
-
-- [ ] All agents in `src/agents/`
-- [ ] Utilities extracted to `src/utils/`
-- [ ] Tests categorized properly
-- [ ] Documentation organized
-- [ ] Config centralized
-- [ ] Scripts in `scripts/`
-- [ ] Path aliases configured
-- [ ] README updated
-
----
-
-**This structure ensures your project remains maintainable and scalable as it grows!**
+*Last updated: April 16, 2026*
+*Framework: Playwright 1.57.0 | TypeScript | Chromium*
