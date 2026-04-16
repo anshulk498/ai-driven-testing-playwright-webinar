@@ -17,11 +17,11 @@
 | 1 | Navigate to SSO | ✅ | Successfully loaded SSO page |
 | 2 | Click Developer Login | ✅ | Login button clicked |
 | 3 | Verify Content Center redirect | ✅ | URL confirmed: `/content-center` |
-| 4 | Check Obligations tab | ✅ | Tab already selected by default |
-| 5 | Click Export button | ✅ | Export button found and clicked |
-| 6 | Verify export process triggered | ✅ | Loading indicator detected |
-| 7 | Download exported file | ✅ | File: `obligations.xlsx` |
-| 8 | Verify file contents | ✅ | File validated successfully |
+| 4 | Click on Status filter icon → select `ready to publish` checkbox → click Submit | ⬜ | Status filter applied for ready to publish |
+| 5 | Hover over Export icon → two options appear: `Export (Columns)` and `Export (Overview)` | ⬜ | Export dropdown revealed on hover |
+| 6 | Click `Export (Columns)` → popup opens showing all fields with checkboxes | ⬜ | Export Columns popup displayed |
+| 7 | Uncheck "Select All" checkbox → select only `ID` and `Title` checkboxes → click Export | ⬜ | Partial column selection confirmed |
+| 8 | Wait for export to complete → verify toast message: `"Obligations columns exported successfully"` | ⬜ | Toast notification validated |
 
 ---
 

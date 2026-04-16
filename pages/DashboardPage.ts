@@ -30,6 +30,12 @@ export class DashboardPage extends BasePage {
     await expect(this.alertsTab).toBeVisible({ timeout: 10_000 });
     await this.alertsTab.click();
     await this.waitForLoader();
+    // Scroll the table into view so the header is accessible
+    await this.page.evaluate(() => {
+      const table = document.querySelector('.el-table');
+      if (table) table.scrollIntoView({ behavior: 'instant', block: 'start' });
+    });
+    await this.page.waitForTimeout(300);
   }
 
   async clickToolsTab(): Promise<void> {
@@ -61,19 +67,118 @@ export class DashboardPage extends BasePage {
     return newTab;
   }
 
-  /** Export the currently active tab's data. Returns download filename. */
-  async clickExport(): Promise<string | null> {
-    // Wait for any loading spinner to finish before checking Export button
-    await this.waitForLoader(30_000);
-    const exportBtn = await this.findLocator([
-      () => this.page.getByRole('button', { name: 'Export', exact: true }),
-      () => this.page.locator('button').filter({ hasText: /^Export$/ }).first(),
-    ], 'Export button', 15_000);
-    await expect(exportBtn).toBeEnabled({ timeout: 10_000 });
-    const downloadPromise = this.page.waitForEvent('download', { timeout: 60_000 }).catch(() => null);
-    await exportBtn.click();
-    const download = await downloadPromise;
-    return download?.suggestedFilename() ?? null;
+  /**
+   * Click the Status column filter icon, select "ready to publish" checkbox, click Submit.
+   */
+  async applyStatusFilter(): Promise<void> {
+    // Scope to the visible tabpanel's table to avoid picking a duplicate hidden th
+    const activePanel = this.page.locator('[role="tabpanel"]:visible, [role="tabpanel"][aria-hidden="false"]').last();
+    const statusHeader = activePanel.locator('th').filter({ hasText: /^status$/i }).first();
+    await statusHeader.waitFor({ state: 'attached', timeout: 10_000 });
+    await statusHeader.hover({ force: true });
+    await this.page.waitForTimeout(600);
+
+    await this.findAndClick([
+      () => statusHeader.locator('img').first(),
+      () => activePanel.locator('[role="columnheader"]').filter({ hasText: /status/i }).locator('img').first(),
+      () => activePanel.locator('.el-table__header th').filter({ hasText: /status/i }).locator('img, i, svg').first(),
+    ], 'Status filter icon', 10_000);
+    await this.page.waitForTimeout(400);
+    console.log('  ✓ Status filter icon clicked');
+
+    // Wait for tooltip/popover to appear
+    const tooltip = this.page.locator('[role="tooltip"]:visible').last();
+    await tooltip.waitFor({ state: 'visible', timeout: 8_000 });
+    await this.page.waitForTimeout(300);
+    console.log('  ✓ Status filter popover opened');
+
+    // Click the "ready to publish" label (Element UI hides the actual input — click the wrapper label)
+    const readyToPublishLabel = tooltip.locator('.el-checkbox').filter({ hasText: /ready to publish/i }).first();
+    await readyToPublishLabel.waitFor({ state: 'attached', timeout: 8_000 });
+    await readyToPublishLabel.click();
+    console.log('  ✓ Selected "ready to publish"');
+
+    // Click Submit
+    await this.findAndClick([
+      () => tooltip.getByRole('button', { name: /submit/i }),
+      () => tooltip.locator('button').filter({ hasText: /submit/i }).first(),
+    ], 'Status filter Submit', 8_000);
+
+    await this.waitForLoader(15_000);
+    console.log('  ✓ Status filter submitted');
+  }
+
+  /**
+   * Hover the Export icon to reveal the dropdown, then click "Export (Columns)".
+   * In the popup: uncheck Select All, check ID + Title, click Export.
+   * Waits for and returns the success toast text.
+   */
+  async exportColumns(toastExpected: string): Promise<void> {
+    // Try direct "Export (Columns)" button first (Alerts tab has it directly)
+    // If not found, hover the Export button to open dropdown (Obligations tab)
+    const directBtn = this.page.getByRole('button', { name: /export.*columns/i });
+    const hasDirect = await directBtn.isVisible().catch(() => false);
+
+    if (hasDirect) {
+      await directBtn.click();
+      console.log('  ✓ Clicked Export (Columns) button directly');
+    } else {
+      // Hover/click the Export button to reveal dropdown
+      const exportTrigger = await this.findLocator([
+        () => this.page.getByRole('button', { name: /^export$/i }),
+        () => this.page.locator('button').filter({ hasText: /^export$/i }).first(),
+      ], 'Export button', 15_000);
+      await exportTrigger.hover();
+      await this.page.waitForTimeout(400);
+
+      const hasDropdown = await this.page.locator('.el-dropdown-menu:visible li').count();
+      if (hasDropdown === 0) {
+        await exportTrigger.click();
+        await this.page.waitForTimeout(400);
+      }
+
+      await this.findAndClick([
+        () => this.page.locator('.el-dropdown-menu:visible li').filter({ hasText: /export.*columns/i }).first(),
+        () => this.page.locator('li').filter({ hasText: /export.*columns/i }).first(),
+        () => this.page.getByRole('button', { name: /export.*columns/i }),
+      ], 'Export (Columns) option', 10_000);
+    }
+
+    // Wait for the popup/dialog
+    await this.page.locator('.el-dialog, .el-popover').first().waitFor({ state: 'visible', timeout: 10_000 });
+    console.log('  ✓ Export Columns popup opened');
+
+    // Uncheck "Select All"
+    const selectAll = this.page.locator('.el-checkbox').filter({ hasText: /select all/i }).first();
+    const isChecked = await selectAll.locator('.el-checkbox__input').evaluate(
+      (el) => el.classList.contains('is-checked')
+    ).catch(() => true);
+    if (isChecked) {
+      await selectAll.click();
+      console.log('  ✓ Unchecked Select All');
+    }
+
+    // Select ID checkbox
+    await this.page.locator('.el-checkbox').filter({ hasText: /^id$/i }).first().click();
+    console.log('  ✓ Checked ID');
+
+    // Select Title checkbox
+    await this.page.locator('.el-checkbox').filter({ hasText: /^title$/i }).first().click();
+    console.log('  ✓ Checked Title');
+
+    // Click Export button inside popup
+    await this.findAndClick([
+      () => this.page.locator('.el-dialog__footer .el-button--primary').filter({ hasText: /^export$/i }).first(),
+      () => this.page.locator('.el-dialog__footer button').filter({ hasText: /export/i }).first(),
+      () => this.page.getByRole('button', { name: /^export$/i }).last(),
+    ], 'Export submit button', 10_000);
+
+    // Wait for success toast
+    const toast = this.page.locator('[role="alert"], .el-message--success, .el-notification--success, .el-message').first();
+    await toast.waitFor({ state: 'visible', timeout: 30_000 });
+    const toastText = (await toast.textContent())?.trim() ?? '';
+    expect(toastText).toContain(toastExpected);
+    console.log(`  ✓ Toast verified: "${toastText}"`);
   }
 
   /** Search by ID in the Tools/Obligations table using the column search icon */

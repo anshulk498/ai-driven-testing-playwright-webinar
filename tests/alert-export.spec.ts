@@ -3,21 +3,27 @@ import { LoginPage } from '../pages/LoginPage';
 import { DashboardPage } from '../pages/DashboardPage';
 
 test.describe('Alert Export', () => {
-  test('login → alerts tab → export → verify download', async ({ page }) => {
-    test.setTimeout(120_000);
+  test('login → alerts tab → status filter → export columns → verify toast', async ({ page }) => {
+    test.setTimeout(180_000);
 
-    // ── Login ──────────────────────────────────────────────────────────────────
+    // ── Step 1-3: Login ────────────────────────────────────────────────────────
     const loginPage = new LoginPage(page);
     await loginPage.loginAsDeveloper();
     await loginPage.verifyLoggedIn();
 
-    // ── Click Alerts tab ───────────────────────────────────────────────────────
     const dashboard = new DashboardPage(page);
-    await dashboard.clickAlertsTab();
 
-    // ── Export ─────────────────────────────────────────────────────────────────
-    const filename = await dashboard.clickExport();
-    expect(filename, 'Export download should have a filename').toBeTruthy();
-    console.log(`✓ Downloaded: ${filename}`);
+    // ── Step 3: Click Alerts tab ───────────────────────────────────────────────
+    await dashboard.clickAlertsTab();
+    console.log('✓ Step 3: Alerts tab loaded');
+
+    // ── Step 4: Status filter ── select "ready to publish" and submit ──────────────
+    await dashboard.applyStatusFilter();
+    console.log('✓ Step 4: Status filter applied — ready to publish');
+
+    // ── Step 5-7: Hover Export → Export (Columns) → uncheck All → ID + Title → Export
+    // ── Step 8: Verify toast ───────────────────────────────────────────────────
+    await dashboard.exportColumns('Alerts columns exported successfully');
+    console.log('✓ Steps 5-8: Export Columns completed and toast verified');
   });
 });

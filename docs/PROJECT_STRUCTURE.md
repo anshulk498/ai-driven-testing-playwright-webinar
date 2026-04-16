@@ -159,4 +159,4 @@ npx playwright test --reporter=html
 ---
 
 *Last updated: April 16, 2026*
-*Framework: Playwright 1.57.0 | TypeScript | Chromium*
+*Framework: Playwright 1.57.0 | TypeScript | Chromium*
