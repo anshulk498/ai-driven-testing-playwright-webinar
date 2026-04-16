@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
 import { AdminPage } from '../pages/AdminPage';
 import { assertUrl } from '../utils/helpers';
 import { ADMIN_ITEMS } from '../test-data/testData';
@@ -9,9 +8,6 @@ test.describe('Record Unlock', () => {
     test.setTimeout(120_000);
 
     // ── Login ──────────────────────────────────────────────────────────────────
-    const loginPage = new LoginPage(page);
-    await loginPage.loginAsDeveloper();
-    await loginPage.verifyLoggedIn();
 
     // ── Navigate to Record Unlock ──────────────────────────────────────────────
     const adminPage = new AdminPage(page);

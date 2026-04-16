@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
 import { ReportPage } from '../pages/ReportPage';
 import { assertTableHasData, assertUrl } from '../utils/helpers';
 import { REPORT_ITEMS, REPORT_DATA } from '../test-data/testData';
@@ -9,9 +8,6 @@ test.describe('Broken Links Report', () => {
     test.setTimeout(120_000);
 
     // ── Login ──────────────────────────────────────────────────────────────────
-    const loginPage = new LoginPage(page);
-    await loginPage.loginAsDeveloper();
-    await loginPage.verifyLoggedIn();
 
     // ── Navigate to Broken Links ───────────────────────────────────────────────
     const reportPage = new ReportPage(page);

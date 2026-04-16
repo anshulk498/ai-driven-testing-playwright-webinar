@@ -181,18 +181,36 @@ export class DashboardPage extends BasePage {
     console.log(`  ✓ Toast verified: "${toastText}"`);
   }
 
-  /** Search by ID in the Tools/Obligations table using the column search icon */
+  /** Search by ID in the active tab's table */
   async searchById(id: string): Promise<void> {
-    await this.findAndClick([
-      () => this.page.locator('[data-v-f9001f20].table-header .el-icon.search-icon').first(),
-      () => this.page.locator('[data-v-f9001f20] .table-header .el-icon.search-icon').first(),
-      () => this.page.locator('.el-icon.search-icon').nth(2),
-    ], 'ID search icon');
-    const filterInput = this.page.locator('input[placeholder="Search by ID"]').last();
-    await expect(filterInput).toBeVisible({ timeout: 8_000 });
-    await filterInput.fill(id);
-    await filterInput.press('Tab');
-    await this.page.keyboard.press('Enter');
+    // Tools tab has a direct search input inside the tabpanel
+    const activePanel = this.page.locator('[role="tabpanel"]:visible').last();
+    const directInput = activePanel.locator('input[placeholder="Search.."], input[placeholder*="Search" i]').first();
+    const hasDirect = await directInput.isVisible().catch(() => false);
+
+    if (hasDirect) {
+      // Use JS to set value and dispatch input event (triggers Vue reactivity)
+      await directInput.evaluate((el, val) => {
+        const input = el as HTMLInputElement;
+        const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')?.set;
+        nativeInputValueSetter?.call(input, val);
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+      }, id);
+      await this.page.waitForTimeout(800);
+      await this.waitForLoader(15_000);
+    } else {
+      await this.findAndClick([
+        () => this.page.locator('[data-v-f9001f20].table-header .el-icon.search-icon').first(),
+        () => this.page.locator('[data-v-f9001f20] .table-header .el-icon.search-icon').first(),
+        () => this.page.locator('.el-icon.search-icon').nth(2),
+      ], 'ID search icon');
+      const filterInput = this.page.locator('input[placeholder="Search by ID"]').last();
+      await expect(filterInput).toBeVisible({ timeout: 8_000 });
+      await filterInput.fill(id);
+      await filterInput.press('Tab');
+      await this.page.keyboard.press('Enter');
+    }
     await this.waitForLoader(15_000);
   }
 }

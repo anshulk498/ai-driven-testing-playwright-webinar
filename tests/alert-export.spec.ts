@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
 import { DashboardPage } from '../pages/DashboardPage';
 
 test.describe('Alert Export', () => {
@@ -7,11 +6,9 @@ test.describe('Alert Export', () => {
     test.setTimeout(180_000);
 
     // ── Step 1-3: Login ────────────────────────────────────────────────────────
-    const loginPage = new LoginPage(page);
-    await loginPage.loginAsDeveloper();
-    await loginPage.verifyLoggedIn();
 
-    const dashboard = new DashboardPage(page);
+    await page.goto('https://cert-comply.content.aws.lexis.com/content-center', { waitUntil: 'domcontentloaded' });
+        const dashboard = new DashboardPage(page);
 
     // ── Step 3: Click Alerts tab ───────────────────────────────────────────────
     await dashboard.clickAlertsTab();

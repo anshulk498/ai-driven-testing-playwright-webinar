@@ -27,6 +27,7 @@ export class AdminPage extends BasePage {
   }
 
   async navigateToAdminPage(pageName: string): Promise<void> {
+    await this.navigateTo('https://cert-comply.content.aws.lexis.com/content-center');
     await this.hoverAdminMenu();
     await this.clickAdminMenuItem(pageName);
   }

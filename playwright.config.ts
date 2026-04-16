@@ -1,7 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  timeout: 30000, // Changed global timeout to 30 seconds
+  timeout: 30000,
+  globalSetup: './global-setup.ts',
   testDir: './tests',
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
@@ -13,6 +14,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     headless: false,
     viewport: { width: 1280, height: 900 },
+    storageState: 'auth.json',
   },
   projects: [
     {

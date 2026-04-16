@@ -36,6 +36,7 @@ export class ReportPage extends BasePage {
 
   /** Navigate to a report by hovering Report menu then clicking item */
   async navigateToReport(reportName: string): Promise<void> {
+    await this.navigateTo('https://cert-comply.content.aws.lexis.com/content-center');
     await this.hoverReportMenu();
     await this.clickReportMenuItem(reportName);
   }
