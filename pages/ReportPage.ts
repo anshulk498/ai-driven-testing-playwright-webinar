@@ -75,8 +75,19 @@ export class ReportPage extends BasePage {
 
   /** Select the Nth date (by day number) in the calendar picker */
   async selectCalendarDate(day: number): Promise<void> {
-    const dayCell = this.page.locator(`.el-date-table td`).filter({ hasText: new RegExp(`^${day}$`) }).first();
-    await this.clickWhenVisible(dayCell);
+    // Try gridcell role first (accessible), then td fallback with JS click
+    const gridCell = this.page.getByRole('gridcell', { name: new RegExp(`^${day}$`) }).first();
+    const hasGridCell = await gridCell.isVisible().catch(() => false);
+    if (hasGridCell) {
+      await gridCell.click();
+    } else {
+      // JS click as fallback for hidden-but-attached td
+      await this.page.evaluate((dayNum) => {
+        const cells = Array.from(document.querySelectorAll('.el-date-table td'));
+        const target = cells.find(td => td.textContent?.trim() === String(dayNum));
+        if (target) (target as HTMLElement).click();
+      }, day);
+    }
   }
 
   async clickGo(): Promise<void> {

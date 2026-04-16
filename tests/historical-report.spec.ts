@@ -23,6 +23,7 @@ test.describe('Historical Notes Report', () => {
 
     // ── Select To Date → 22nd ─────────────────────────────────────────────────
     await reportPage.findAndClick([
+      () => page.locator('input[placeholder="Select date"]').last(),
       () => page.locator('input[placeholder="Select Date"]').last(),
       () => page.locator('.el-date-editor input').last(),
     ], 'To Date picker');
