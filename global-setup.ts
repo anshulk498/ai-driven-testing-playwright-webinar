@@ -2,7 +2,7 @@ import { chromium, FullConfig } from '@playwright/test';
 import { URLS } from './test-data/testData';
 
 const SSO_EMAIL    = 'kamboja1@legal.regn.net';
-const SSO_PASSWORD = 'LexisFeb@192026';
+const SSO_PASSWORD = 'LexisAp@192026';
 
 /**
  * Global setup: performs SSO login once and saves storageState to auth.json.

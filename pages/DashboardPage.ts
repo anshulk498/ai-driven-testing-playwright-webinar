@@ -54,6 +54,64 @@ export class DashboardPage extends BasePage {
     return newTab;
   }
 
+  /**
+   * In the Tools tab: click the ID column search icon, enter toolId, submit,
+   * then click the Title cell in the matching row to open tool details.
+   */
+  async searchAndOpenTool(toolId: string): Promise<void> {
+    // Scope using the active tabpanel (same pattern as applyStatusFilter)
+    const activePanel = this.page.locator('[role="tabpanel"]:visible').last();
+
+    // Hover the ID th to trigger :hover CSS (reveals hidden search icon)
+    const idHeader = activePanel.locator('th').filter({ hasText: /^id$/i }).first();
+    await idHeader.waitFor({ state: 'attached', timeout: 10_000 });
+    await idHeader.scrollIntoViewIfNeeded();
+    await idHeader.hover({ force: true });
+    await this.page.waitForTimeout(800);
+
+    // Get exact center of the last img (search icon) via getBoundingClientRect
+    // even if CSS-hidden, getBoundingClientRect gives real position
+    const iconCenter = await idHeader.locator('img').last().evaluate((el: Element) => {
+      const r = el.getBoundingClientRect();
+      return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+    });
+    // Re-hover to keep :hover state, then click the icon's exact center
+    await idHeader.hover({ force: true });
+    await this.page.waitForTimeout(300);
+    await this.page.mouse.click(iconCenter.x, iconCenter.y);
+    await this.page.waitForTimeout(600);
+    console.log('  ✓ ID column search icon clicked');
+
+    // Wait for tooltip/popover with input — same selector as applyStatusFilter
+    const tooltip = this.page.locator('[role="tooltip"]:visible').last();
+    await tooltip.waitFor({ state: 'visible', timeout: 8_000 });
+
+    // Enter the toolId
+    const filterInput = tooltip.locator('input').first();
+    await filterInput.waitFor({ state: 'visible', timeout: 5_000 });
+    await filterInput.fill(toolId);
+    console.log(`  ✓ Entered ID "${toolId}" in column filter`);
+
+    // Click Submit
+    await this.findAndClick([
+      () => tooltip.getByRole('button', { name: /submit/i }),
+      () => tooltip.locator('button').filter({ hasText: /submit/i }).first(),
+    ], 'ID filter Submit', 5_000);
+    await this.waitForLoader(15_000);
+    console.log('  ✓ ID filter submitted');
+
+    // Find the row and click the Title cell (index 2)
+    const toolRow = activePanel.locator('tbody tr').filter({ hasText: toolId }).first();
+    await expect(toolRow).toBeVisible({ timeout: 15_000 });
+    console.log(`  ✓ Tool ${toolId} found in search results`);
+
+    const titleCell = toolRow.locator('td').nth(2);
+    await titleCell.click();
+    await this.page.waitForLoadState('domcontentloaded');
+    await expect(this.page).toHaveURL(/toolDetails/, { timeout: 15_000 });
+    console.log(`  ✓ Opened tool details for ${toolId}`);
+  }
+
   /** Hover Create button and click a submenu item (e.g. "Subobligation") */
   async clickCreateSubmenuItem(itemText: string): Promise<Page> {
     const newTabPromise = this.page.context().waitForEvent('page');

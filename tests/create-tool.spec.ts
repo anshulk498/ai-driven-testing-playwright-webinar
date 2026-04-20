@@ -37,13 +37,12 @@ test.describe('Create Tool', () => {
     console.log(`✓ Tool ID: ${toolId}`);
     expect(toolId).toMatch(/\d{6,}/);
 
-    // ── Navigate back to content-center and search ────────────────────────────
+    // ── Logo → Tools tab → search by ID → click row to open tool details ──────
     await toolPage.clickLogoHome();
     await expect(toolTab).toHaveURL(/content-center/, { timeout: 15_000 });
-
-    // ── Navigate directly to tool details by ID ──────────────────────────────
-    await toolTab.goto(`https://cert-comply.content.aws.lexis.com/content-center/toolDetails/${toolId}`, { waitUntil: 'domcontentloaded' });
-    await expect(toolTab).toHaveURL(/toolDetails/, { timeout: 15_000 });
+    const dashboard1 = new DashboardPage(toolTab);
+    await dashboard1.clickToolsTab();
+    await dashboard1.searchAndOpenTool(toolId);
 
     // ── Edit → Save Draft → Start Review → Ready to Publish → Publish ─────────
     await toolPage.clickEdit();
@@ -53,12 +52,11 @@ test.describe('Create Tool', () => {
     await toolPage.clickReadyToPublish();
     await toolPage.clickPublish();
 
-    // ── Click Logo → Tools tab → verify the new tool row shows "live" status ─────
+    // ── Logo → Tools tab → search by ID → verify "live" status ───────────────
     await toolPage.clickLogoHome();
     await expect(toolTab).toHaveURL(/content-center/, { timeout: 15_000 });
     const dashboard2 = new DashboardPage(toolTab);
     await dashboard2.clickToolsTab();
-    // Search for the tool by ID using the Tools tabpanel search input
     const toolsPanel = toolTab.getByRole('tabpanel', { name: 'Tools' });
     await toolsPanel.locator('input[placeholder="Search.."]').fill(toolId);
     await toolTab.waitForTimeout(2000);
